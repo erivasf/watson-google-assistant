@@ -21,7 +21,7 @@
   "conversations": {
     "Watson": {
       "name": "Watson",
-      "url": "https://api.us-east.assistant.watson.cloud.ibm.com/instances/7b341853-cac9-4f65-94f6-5edfb0b7a42f",
+      "url": "https://watson-google-assistant-20200709212916318.mybluemix.net",
       "fulfillmentApiVersion": 2,
       "in_dialog_intents": [
         {
