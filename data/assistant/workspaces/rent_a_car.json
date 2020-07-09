@@ -834,7 +834,7 @@
       "output": {
         "generic": [{
           "values": [{
-              "text": "No le he entendido. Intente reformular la consulta."
+              "text": "Hola, soy su asistente virtual BBVA. ¿Cómo puedo ayudarte?"
             },
             {
               "text": "¿Hay algo más en lo que lo pueda ayudar? Puedo darle información sobre las tarjetas disponibles, ayudarte a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
