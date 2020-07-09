@@ -1,0 +1,1137 @@
+{
+  "intents": [
+    {
+      "intent": "ubicacion_sucursal",
+      "examples": [
+        {
+          "text": "Sucursal cerca de mi"
+        },
+        {
+          "text": "Sucursal"
+        },
+        {
+          "text": "Sucursales"
+        },
+        {
+          "text": "Sucursales cercanas"
+        },
+        {
+          "text": "Ir a una sucursal cerca"
+        },
+        {
+          "text": "¿Cuál es la sucursal más cercana?"
+        }
+      ],
+      "description": "Solicitud de sucursal más cercana."
+    },
+    {
+      "intent": "tipos_de_tarjetas",
+      "examples": [
+        {
+          "text": "Qué tarjetas tienen"
+        },
+        {
+          "text": "¿Cuáles tarjetas de crédito hay?"
+        },
+        {
+          "text": "¿Qué tarjetas de crédito tienes?"
+        },
+        {
+          "text": "Opciones de tarjetas de crédito"
+        },
+        {
+          "text": "Quiero saber qué tarjetas de crédito existen."
+        },
+        {
+          "text": "Tarjetas de crédito"
+        },
+        {
+          "text": "Tarjetas de crédito."
+        }
+      ],
+      "description": "Solicitud de tipos de tarjetas."
+    },
+    {
+      "intent": "robo_de_tarjeta",
+      "examples": [
+        {
+          "text": "Robo"
+        },
+        {
+          "text": "Me robaron"
+        },
+        {
+          "text": "Me robaron la tarjeta"
+        },
+        {
+          "text": "Me acaban de robar"
+        },
+        {
+          "text": "Me acaban de robar mi cartera"
+        },
+        {
+          "text": "Me robaron la cartera"
+        }
+      ],
+      "description": "Solicitud de cancelación por robo"
+    },
+    {
+      "intent": "despedida",
+      "examples": [
+        {
+          "text": "Adiós"
+        },
+        {
+          "text": "Esto sería todo, gracias."
+        },
+        {
+          "text": "Adiós."
+        },
+        {
+          "text": "Hasta luego."
+        },
+        {
+          "text": "Gracias, hasta luego."
+        },
+        {
+          "text": "Gracias"
+        }
+      ],
+      "description": "Solicitud de cierre de conversación."
+    },
+    {
+      "intent": "cancelacion_tarjeta",
+      "examples": [
+        {
+          "text": "Quiero cancelar mi tarjeta."
+        },
+        {
+          "text": "Cancelación de tarjeta"
+        },
+        {
+          "text": "Quiero cancelar mi tarjeta de crédito."
+        },
+        {
+          "text": "Necesito cancelar mi tarjeta de crédito"
+        },
+        {
+          "text": "Cancelar tarjeta."
+        },
+        {
+          "text": "Cancelación"
+        }
+      ],
+      "description": "Solicitud para cancelar la tarjeta."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "opciones_ingresos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "30,000",
+          "synonyms": [
+            "Treinta mil ",
+            "30 mil",
+            "30000",
+            "30,000",
+            "30,000.00"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "60,000",
+          "synonyms": [
+            "Sesenta mil",
+            "60 mil",
+            "60000",
+            "60,000",
+            "60,000.00"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "10,000",
+          "synonyms": [
+            "Diez mil ",
+            "10 mil",
+            "10000",
+            "10,000",
+            "10,000.00"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Respuestas",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Positivo",
+          "synonyms": [
+            "Sí",
+            "Claro",
+            "Si porfavor",
+            "si",
+            "Así es ",
+            "Algunas veces",
+            "A veces",
+            "Algo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Duda no resuelta",
+          "synonyms": [
+            "No encuentro la opción que necesito",
+            "No me sirven las opciones",
+            "No encuentro respuesta",
+            "Esto no me ayuda",
+            "No encuentro la información que estoy buscando",
+            "Necesito más información"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Despedida",
+          "synonyms": [
+            "nada",
+            "eso es todo",
+            "adiós",
+            "nada, gracias",
+            "hasta luego"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Negativo",
+          "synonyms": [
+            "No",
+            "No gracias"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tarjeta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Tarjeta",
+          "synonyms": [
+            "1234 5678 1234 5678",
+            "1234567812345678",
+            "1 2 3 4 5 6 7 8  1 2 3 4 5 6 7 8 ",
+            "12345678 12345678"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "codigos_postales",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "14200",
+          "synonyms": [
+            "catorce doscientos",
+            "14200",
+            "1 4 2 0 0",
+            "catorce mil doscientos",
+            "uno cuatro dos cero cero"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "01900",
+          "synonyms": [
+            "Mil novecientos ",
+            "1900",
+            "1 9 0 0",
+            "diecinueve cero cero",
+            "19 00",
+            "cero uno nueve cero cero"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Motivo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para suspender su tarjeta, por favor proporcione los 16 dígitos de la misma."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1594326130282",
+      "conditions": "#robo_de_tarjeta",
+      "dialog_node": "node_6_1594326284703"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmación",
+      "parent": "node_6_1594326284703",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_10_1594326587703"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Hay algo más en lo que le pueda ayudar? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1594321969228",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1591678847222"
+      },
+      "conditions": "@Respuestas:Negativo",
+      "dialog_node": "response_8_1594322534480",
+      "previous_sibling": "response_2_1594322517122"
+    },
+    {
+      "type": "standard",
+      "title": "Nivel de ingresos",
+      "parent": "node_6_1594321969228",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@opciones_ingresos",
+      "dialog_node": "node_5_1594322014897",
+      "previous_sibling": "response_8_1594322534480"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Cuál es su ingreso mensual neto?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1594321969228",
+      "conditions": "@Respuestas:Positivo",
+      "dialog_node": "response_2_1594322517122"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tenemos una oferta para ti, La tarjeta Platinum BBVA con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 15% de tus compras en puntos ¿te interesa contratarla?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1594322014897",
+      "conditions": "@opciones_ingresos:(60,000)",
+      "dialog_node": "response_2_1594322040112",
+      "previous_sibling": "response_5_1594322034599"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tenemos una oferta para ti, La tarjeta Oro BBVA con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 11% de tus compras en puntos ¿te interesa contratarla?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1594322014897",
+      "conditions": "@opciones_ingresos:(30,000)",
+      "dialog_node": "response_5_1594322034599",
+      "previous_sibling": "response_6_1594322022093"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tenemos una oferta para ti, La tarjeta Azul BBVA con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 9% de tus compras en puntos, ¿te interesa contratarla?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1594322014897",
+      "conditions": "@opciones_ingresos:(10,000)",
+      "dialog_node": "response_6_1594322022093",
+      "previous_sibling": "node_4_1594322233929"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no he entendido su respuesta."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Ingrese su ingreso mensual neto"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1594322014897",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1594321969228"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1594322052886",
+      "previous_sibling": "response_2_1594322040112"
+    },
+    {
+      "type": "standard",
+      "title": "Cierre",
+      "parent": "node_5_1594322014897",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Respuestas",
+      "dialog_node": "node_4_1594322233929"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Espero poder haberte ayudado, ¡hasta luego!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1591681651089",
+      "conditions": "@Respuestas:Negativo",
+      "dialog_node": "response_5_1591681681905",
+      "previous_sibling": "response_7_1591681669654"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Espero poder haberte ayudado, ¡hasta luego!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1591681651089",
+      "conditions": "@Respuestas:Despedida",
+      "dialog_node": "response_7_1591681669654"
+    },
+    {
+      "type": "standard",
+      "title": "Información sobre tarjetas",
+      "parent": "node_1_1594321852290",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Respuestas",
+      "dialog_node": "node_6_1594321969228"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Espero poder haberte ayudado, ¡hasta luego!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594328542148",
+      "conditions": "@Respuestas:Negativo",
+      "dialog_node": "response_5_1594328542148",
+      "previous_sibling": "response_4_1594328542148"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Espero poder haberte ayudado, ¡hasta luego!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594328542148",
+      "conditions": "@Respuestas:Despedida",
+      "dialog_node": "response_4_1594328542148"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no coincide la información de la tarjeta. Intente de nuevo más tarde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1594326587703",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1591678847222"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1594327291472",
+      "previous_sibling": "response_2_1594327255712"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Su tarjeta con terminación 5678 ha sido cancelada. ¿Hay algo más en lo que le pueda ayudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1594326587703",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1594328542142"
+      },
+      "conditions": "@tarjeta:Tarjeta",
+      "dialog_node": "response_2_1594327255712",
+      "previous_sibling": "node_3_1594326728981"
+    },
+    {
+      "type": "standard",
+      "title": "Cierre",
+      "parent": "node_10_1594326587703",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Respuestas",
+      "dialog_node": "node_3_1594326728981"
+    },
+    {
+      "type": "standard",
+      "parent": "node_6_1591678847222",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Respuestas",
+      "dialog_node": "node_3_1591681651089"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594326728981",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1591678847222"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1594327170791",
+      "previous_sibling": "response_1_1594327023619"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594326728981",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1591718626102"
+      },
+      "conditions": "@Respuestas:Negativo",
+      "dialog_node": "response_1_1594327023619",
+      "previous_sibling": "response_4_1594326738934"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594326728981",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1591678847222"
+      },
+      "conditions": "@Respuestas:Positivo",
+      "dialog_node": "response_4_1594326738934"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Hay algo más en lo que lo pueda ayudar? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1594322233929",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1591678847222"
+      },
+      "conditions": "@Respuestas:Negativo",
+      "dialog_node": "response_7_1594322292450",
+      "previous_sibling": "response_1_1594322244423"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Te direccionaré al portal para que completes tus datos, gracias por preferir BBVA."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1594322233929",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1594328542142"
+      },
+      "conditions": "@Respuestas:Positivo",
+      "dialog_node": "response_1_1594322244423"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La sucursal más cercana al código postal 14200 está en Avenida de Las Fuentes 409 en Jardines del Pedregal en Álvaro Obregón."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1594327746122",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1594328542142"
+      },
+      "conditions": "@codigos_postales:14200",
+      "dialog_node": "response_3_1594327916302",
+      "previous_sibling": "response_7_1594327761494"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no le he entendido. ¿Puede repetir su código postal?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1594327746122",
+      "conditions": "true",
+      "dialog_node": "response_1_1594328272150",
+      "previous_sibling": "response_3_1594327916302"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No le he entendido. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1594327746122",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1594328542142"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1594328394906",
+      "previous_sibling": "response_1_1594328272150"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La sucursal más cercana al código postal 01900 está en Carretera Picacho-Ajusco 710 en la Colonia Héroes de Padierna, Tlalpan."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1594327746122",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1594328542142"
+      },
+      "conditions": "@codigos_postales:01900",
+      "dialog_node": "response_7_1594327761494",
+      "previous_sibling": "slot_6_1594327985143"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1594327746122",
+      "variable": "$codigos_postales_01900",
+      "dialog_node": "slot_6_1594327985143",
+      "previous_sibling": "handler_1_1594327984824"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Por favor ingrese su código postal para indicarle la sucursal más cercana."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1594327746122",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1594327984824"
+    },
+    {
+      "type": "standard",
+      "title": "Selección",
+      "parent": "node_8_1594327697462",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@codigos_postales",
+      "dialog_node": "node_7_1594327746122"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "¿Cuál es su código postal?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1594327985143",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1594327985152",
+      "previous_sibling": "handler_5_1594327985152"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1594327985143",
+      "context": {
+        "codigos_postales_01900": "@codigos_postales"
+      },
+      "conditions": "@codigos_postales",
+      "event_name": "input",
+      "dialog_node": "handler_5_1594327985152"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_2_1594328542142",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Respuestas",
+      "dialog_node": "node_3_1594328542148"
+    },
+    {
+      "type": "standard",
+      "title": "Sucursales",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Gracias por preferir BBVA, ¿me podría proporcionar su Código Postal?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ubicacion_sucursal",
+      "dialog_node": "node_8_1594327697462",
+      "previous_sibling": "node_10_1594326130282"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Espero poder haberle ayudado, ¡hasta luego!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#despedida",
+      "dialog_node": "node_6_1591718626102",
+      "previous_sibling": "En otras cosas"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelación",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Cuál es el motivo de la cancelación?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#cancelacion_tarjeta",
+      "dialog_node": "node_10_1594326130282",
+      "previous_sibling": "node_1_1594321852290"
+    },
+    {
+      "type": "standard",
+      "title": "Sin respuesta.",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Hay algo más en lo que pueda ayudarle? Puedo darle información sobre las tarjetas disponibles, ayudarte a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "",
+      "dialog_node": "node_2_1594328542142",
+      "previous_sibling": "node_6_1591678847222"
+    },
+    {
+      "type": "standard",
+      "title": "Auxiliar",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Puedo darle información sobre las tarjetas disponibles, ayudarte a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1591678847222",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "title": "En otras cosas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No le he entendido. Intente reformular la consulta."
+              },
+              {
+                "text": "¿Hay algo más en lo que lo pueda ayudar? Puedo darle información sobre las tarjetas disponibles, ayudarte a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
+              },
+              {
+                "text": "Intente de nuevo, no le he entendido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_8_1594327697462",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Opciones de tarjetas de crédito",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tenemos 3 opciones. Tarjeta Azul, Tarjeta Oro y Tarjeta Platinum"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "¿Quieres más información?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#tipos_de_tarjetas",
+      "dialog_node": "node_1_1594321852290",
+      "previous_sibling": "node_2_1594328542142"
+    },
+    {
+      "type": "standard",
+      "title": "Bienvenido",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hola, soy su asistente virtual BBVA. ¿Cómo puedo ayudarte?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bienvenido"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Querías decir:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Ninguna de las anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Querías decir:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Demo",
+  "language": "es",
+  "description": ""
+}
