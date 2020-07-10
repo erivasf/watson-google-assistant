@@ -591,7 +591,7 @@
       "output": {
         "generic": [{
           "values": [{
-            "text": "Tenemos una oferta para ti, La tarjeta Azul BBVA con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 9% de tus compras en puntos, ¿te interesa contratarla?"
+            "text": "Tenemos una oferta para ti, La tarjeta Azul BBVA. Con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 9% de tus compras en puntos, ¿te interesa contratarla?"
           }],
           "response_type": "text",
           "selection_policy": "sequential"
@@ -640,7 +640,7 @@
       "output": {
         "generic": [{
           "values": [{
-            "text": "Tenemos una oferta para ti, La tarjeta Oro BBVA con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 11% de tus compras en puntos ¿te interesa contratarla?"
+            "text": "Tenemos una oferta para ti, La tarjeta Oro BBVA. Con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 11% de tus compras en puntos ¿te interesa contratarla?"
           }],
           "response_type": "text",
           "selection_policy": "sequential"
@@ -656,7 +656,7 @@
       "output": {
         "generic": [{
           "values": [{
-            "text": "Tenemos una oferta para ti, La tarjeta Platinum BBVA con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 15% de tus compras en puntos ¿te interesa contratarla?"
+            "text": "Tenemos una oferta para ti, La tarjeta Platinum BBVA. Con ella podrás pagar en miles de comercios en el mundo, tendrás ofertas de estrenos y 15% de tus compras en puntos ¿te interesa contratarla?"
           }],
           "response_type": "text",
           "selection_policy": "sequential"
@@ -837,7 +837,7 @@
               "text": "Hola, soy su asistente virtual BBVA. ¿Cómo puedo ayudarte?"
             },
             {
-              "text": "¿Hay algo más en lo que lo pueda ayudar? Puedo darle información sobre las tarjetas disponibles, ayudarte a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
+              "text": "¿Hay algo más en lo que le pueda ayudar? Puedo darle información sobre las tarjetas disponibles, ayudarle a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
             },
             {
               "text": "Intente de nuevo, no le he entendido."
@@ -875,7 +875,7 @@
       "output": {
         "generic": [{
           "values": [{
-            "text": "¿Hay algo más en lo que pueda ayudarle? Puedo darle información sobre las tarjetas disponibles, ayudarte a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
+            "text": "¿Hay algo más en lo que pueda ayudarle? Puedo darle información sobre las tarjetas disponibles, ayudarle a cancelar una tarjeta de crédito o a encontrar la sucursal más cercana."
           }],
           "response_type": "text",
           "selection_policy": "sequential"
